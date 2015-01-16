@@ -1,0 +1,27 @@
+{
+  "name": "quiz",
+  "version": "0.0.1",
+  "authors": [
+    "Alex <alexich.by@gmail.com>"
+  ],
+  "main": "server.js",
+  "license": "apache",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap-less": "~3.2.0",
+    "angular-strap": "~2.1.0",
+    "angular-route": "~1.4.0",
+    "angular": "~1.3.9",
+    "firebase": "~2.1.0",
+    "angularfire": "~0.9.1",
+    "angular-adaptive-detection": "latest"
+  }
+}

@@ -1,0 +1,12 @@
+<input type="text" ng-model="value"/>
+<button class="btn" ng-click="runGame()">run</button>
+<button class="btn btn-danger" ng-click="send()">test</button>
+
+<ul id="todo-list">
+    <li ng-repeat="(id, todo) in game.todos">
+        <div class="view">
+            <label>{{todo.item}}</label>
+            <label>{{id}}</label>
+        </div>
+    </li>
+</ul>
