@@ -1,0 +1,11 @@
+<button class="btn btn-success btn-game" ng-click="answer()" ng-if="!state.game.lock">I know!</button>
+<button class="btn btn-warning btn-game" ng-if="state.game.lock">Wait ...</button>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-header">
+            <span class="navbar-brand pull-left">{{state.user.name}}</span>
+            <span class="navbar-brand pull-right">{{state.user.score}}</span>
+        </div>
+    </div>
+</nav>

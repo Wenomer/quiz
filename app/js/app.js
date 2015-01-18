@@ -1,13 +1,19 @@
-angular.module('mQuiz', ['ngRoute', 'firebase', 'adaptive.detection'])
+angular.module('mQuiz', ['ngRoute', 'firebase', 'adaptive.detection', 'ngCookies'])
     .config(function($locationProvider, $routeProvider, $detectionProvider) {
-        $locationProvider.html5Mode(true);
+//        $locationProvider.html5Mode(true);
         var isMobile = $detectionProvider.$get().isAndroid() || $detectionProvider.$get().isiOS() || $detectionProvider.$get().isWindowsPhone();
+        var prefix = isMobile ? 'Mobile' : 'Desktop';
 
         $routeProvider
             .when('/', {
-                templateUrl: isMobile ? 'public/views/mobile_main.html' : 'public/views/desktop_main.html',
-                controller: isMobile ? 'MainMobileCtrl' : 'MainDesktopCtrl',
-                controllerAs: isMobile ? 'mainMobileCtrl' : 'mainDesktopCtrl'
+                templateUrl: 'public/views/'+prefix.toLowerCase()+'_main.html',
+                controller: 'Main'+prefix+'Ctrl',
+                controllerAs: 'main'+prefix+'Ctrl'
+            })
+            .when('/game', {
+                templateUrl: 'public/views/'+prefix.toLowerCase()+'_game.html',
+                controller: 'Game'+prefix+'Ctrl',
+                controllerAs: 'Game'+prefix+'Ctrl'
             })
 //            .when('/:repository', {
 //                templateUrl: 'views/repositories.html',

@@ -1,1 +1,15 @@
-<button class="btn btn-mobile" ng-class="{'btn-danger': !game.isRun, 'btn-info': game.isRun}" ng-click="stopGame()">test</button>
+<!--<button class="btn btn-mobile" ng-class="{'btn-danger': !game.isRun, 'btn-info': game.isRun}" ng-click="stopGame()">test</button>-->
+
+<div class="start-menu">
+    <form name="loginuser" novalidate ng-submit="loginuser.$valid && joinUser()">
+        <select class="select" ng-required="true" ng-model="login.game" ng-options="id as game.name for (id, game) in settings.games">
+            <option value="">Select Game</option>
+        </select>
+        <!--<select class="select" ng-model="login.name" ng-options="id as player.name for (id, player) in settings.games[login.game].players">-->
+            <!--<option value="">Select User</option>-->
+        <!--</select>-->
+        <!--<p>OR</p>-->
+        <input class="input" type="text" ng-required="true" placeholder="Enter Name" ng-model="login.name"/>
+        <button type="submit" class="btn btn-primary">Join game</button>
+    </form>
+</div>

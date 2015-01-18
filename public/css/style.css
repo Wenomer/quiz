@@ -6163,8 +6163,45 @@ button.close {
     display: none !important;
   }
 }
-.btn-mobile {
+.mobile {
+  text-align: center;
+  font-size: 22px;
+}
+.mobile .btn,
+.mobile .input,
+.mobile .select {
+  width: 90%;
+  height: 70px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.mobile .navbar-brand {
+  font-size: 22px;
+}
+.mobile .navbar-brand.current-user {
+  color: #428bca;
+}
+.mobile .navbar-score {
+  margin-top: -20px;
+  background-color: #4FC1E9;
+}
+.mobile .btn-game {
   width: 100%;
-  height: 300px;
-  font-size: 70px;
+  height: 200px;
+  font-size: 50px;
+}
+.start-menu {
+  text-align: center;
+}
+.start-menu .btn,
+.start-menu .select,
+.start-menu .input {
+  margin-bottom: 20px;
+}
+form.ng-invalid.ng-submitted input.ng-invalid,
+form.ng-invalid.ng-submitted select.ng-invalid {
+  border-color: red;
+}
+.current-user {
+  color: #428bca;
 }

@@ -9,32 +9,34 @@
     <link rel="icon" type="image/png" href="favicon.png"/>
     <link href="/public/css/style.css" rel="stylesheet">
 </head>
-<body>
+<body ng-controller="StateCtrl" class="{{state.device}}">
 
-<!--<div class="navbar navbar-default navbar-static-top" role="navigation" bs-navbar>-->
-    <!--<div class="navbar-header">-->
-        <!--<a class="navbar-brand" href="/">-->
-            <!--<span class="glyphicon glyphicon-film"></span>-->
-            <!--m<strong>Request</strong>-->
-        <!--</a>-->
-    <!--</div>-->
-    <!--<ul class="nav navbar-nav">-->
-        <!--<li data-match-route="/$"><a href="/">Home</a></li>-->
-        <!--<li data-match-route="/add"><a href="/add">Add</a></li>-->
-    <!--</ul>-->
-    <!--<ul class="nav navbar-nav pull-right" ng-if="!currentUser">-->
-        <!--<li data-match-route="/login"><a href="/login">Login</a></li>-->
-        <!--<li data-match-route="/signup"><a href="/signup">Sign up</a></li>-->
-    <!--</ul>-->
-    <!--<ul class="nav navbar-nav pull-right" ng-if="currentUser">-->
-        <!--<li class="navbar-text" ng-bind="currentUser.email"></li>-->
-        <!--<li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>-->
-    <!--</ul>-->
-<!--</div>-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand">Quiz!</a>
+            <span class="navbar-brand current-user pull-right">
+                <a ng-click="logout()">logout</a>
+            </span>
+        </div>
 
-<!--<div class="container">-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+                <!--<li><a href="#">Link</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div ng-if="state.isMobile">
     <div ng-view></div>
-<!--</div>-->
+</div>
+
+<div class="container" ng-if="!state.isMobile">
+    <div ng-view></div>
+</div>
 
 <script src="/public/js/app.min.js"></script>
 </body>

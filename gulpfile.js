@@ -16,6 +16,7 @@ var jsSource = [
     'app/bower_components/angular/angular.js',
     'app/bower_components/angular-route/angular-route.js',
     'app/bower_components/angular-strap/dist/angular-strap.min.js',
+    'app/bower_components/angular-cookies/angular-cookies.min.js',
     'app/bower_components/firebase/firebase.js',
     'app/bower_components/angular-adaptive-detection/angular-adaptive-detection.min.js',
     'app/bower_components/angularfire/dist/angularfire.min.js',
